@@ -1,0 +1,70 @@
+# Rules in this file were initially inferred by Visual Studio IntelliCode from the C:\Users\Alex\source\repos\AspNetCoreApiTemplate codebase based on best match to current usage at 17/04/2021
+# You can modify the rules from these initially generated values to suit your own policies
+# You can learn more about editorconfig here: https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
+
+root = true
+
+[*.cs]
+
+#General
+charset = utf-8
+insert_final_newline = true
+
+#use soft tabs (spaces) for indentation
+indent_style = space
+indent_size = 4
+
+# BEGIN DESIGN
+    # Design rules support adherence to the .NET Framework Design Guidelines.
+    dotnet_analyzer_diagnostic.category-Design.severity = error
+# END DESIGN
+
+# BEGIN GLOBALIZATION
+    # Globalization rules support world-ready libraries and applications.
+    dotnet_analyzer_diagnostic.category-Globalization.severity = error
+# END GLOBALIZATION
+
+# BEGIN INTEROPERABILITY
+    # Globalization rules support world-ready libraries and applications.
+    dotnet_analyzer_diagnostic.category-Interoperability.severity = error
+# END INTEROPERABILITY
+
+# BEGIN NAMING
+    # Naming rules support adherence to the naming conventions of the .NET design guidelines.
+    dotnet_analyzer_diagnostic.category-Naming.severity = error
+# END NAMING
+
+# BEGIN PERFORMANCE
+    # Performance rules support high-performance libraries and applications.
+    dotnet_analyzer_diagnostic.category-Performance.severity = error
+# END PERFORMANCE
+
+# BEGIN RELIABILITY
+    # Reliability rules support library and application reliability, such as correct memory and thread usage.
+    dotnet_analyzer_diagnostic.category-Reliability.severity = error
+# END RELIABILITY
+
+# BEGIN SECURITY
+    # Reliability rules support library and application reliability, such as correct memory and thread usage.
+    dotnet_analyzer_diagnostic.category-Security.severity = error
+    # Do not use insecure randomness
+    dotnet_diagnostic.CA5394.severity = silent
+# END SECURITY
+
+# BEGIN STYLE
+    # Style rules support consistent code style in your codebase. These rules start with the "IDE" prefix.
+    dotnet_analyzer_diagnostic.category-Style.severity = error
+
+    # Use 'var' instead of explicit type
+    dotnet_diagnostic.IDE0007.severity = silent
+    dotnet_diagnostic.IDE0008.severity = silent
+    # Use block body for methods
+    dotnet_diagnostic.IDE0022.severity = silent
+    # Expression value is not used
+    dotnet_diagnostic.IDE0058.severity = silent
+# END STYLE
+
+# BEGIN USAGE
+    # Usage rules support proper usage of .NET.
+    dotnet_analyzer_diagnostic.category-Usage.severity = error
+# END USAGE

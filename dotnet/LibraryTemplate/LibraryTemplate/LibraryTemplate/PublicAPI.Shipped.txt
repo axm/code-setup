@@ -1,0 +1,5 @@
+#nullable enable
+LibraryTemplate.Class1
+LibraryTemplate.Class1.Class1() -> void
+LibraryTemplate.Class2
+LibraryTemplate.Class2.Class2() -> void
