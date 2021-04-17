@@ -4,6 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace AspNetCoreApiTemplate
 {
@@ -21,9 +24,19 @@ namespace AspNetCoreApiTemplate
         {
 
             services.AddControllers();
+            services.AddHttpClient("azure", httpClient =>
+            {
+                httpClient.BaseAddress = new Uri("https://atlas.microsoft.com/search/address/json");
+            });
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AspNetCoreApiTemplate", Version = "v1" });
+                c.IgnoreObsoleteActions();
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
         }
 

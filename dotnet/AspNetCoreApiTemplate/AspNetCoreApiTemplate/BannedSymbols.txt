@@ -1,1 +1,3 @@
 ﻿T:AspNetCoreApiTemplate.Location;Don't use Location
+M:AspNetCoreApiTemplate.Location;Don't use Location
+P:AspNetCoreApiTemplate.Location;Don't use Location

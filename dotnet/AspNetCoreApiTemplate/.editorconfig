@@ -42,6 +42,7 @@ indent_size = 4
 # BEGIN RELIABILITY
     # Reliability rules support library and application reliability, such as correct memory and thread usage.
     dotnet_analyzer_diagnostic.category-Reliability.severity = error
+    dotnet_code_quality.CA2000.excluded_symbol_names = HttpClient
 # END RELIABILITY
 
 # BEGIN SECURITY
