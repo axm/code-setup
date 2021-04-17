@@ -4,8 +4,6 @@
 
 root = true
 
-[*.cs]
-
 #General
 charset = utf-8
 insert_final_newline = true
@@ -14,6 +12,7 @@ insert_final_newline = true
 indent_style = space
 indent_size = 4
 
+[*.cs]
 # BEGIN DESIGN
     # Design rules support adherence to the .NET Framework Design Guidelines.
     dotnet_analyzer_diagnostic.category-Design.severity = error
