@@ -19,12 +19,13 @@ steps:
   displayName: 'Run a multi-line script'
 
 - task: DotNetCoreCLI@2
-  continueOnError: true
+  displayName: Build AspNetCoreApiTemplate
   inputs:
     command: 'build'
     projects: '$(System.DefaultWorkingDirectory)/dotnet/AspNetCoreApiTemplate/AspNetCoreApiTemplate.sln'
 
 - task: DotNetCoreCLI@2
+  displayName: Test AspNetCoreApiTemplate
   inputs:
     command: 'test'
     projects: 'dotnet/AspNetCoreApiTemplate/AspNetCoreApiTemplate.sln'
