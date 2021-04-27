@@ -7,8 +7,8 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["AspNetCoreApiTemplate/AspNetCoreApiTemplate.csproj", "AspNetCoreApiTemplate/"]
-RUN dotnet restore "AspNetCoreApiTemplate/AspNetCoreApiTemplate.csproj"
+COPY ["AspNetCoreApiTemplate.csproj", "AspNetCoreApiTemplate/"]
+RUN dotnet restore "AspNetCoreApiTemplate.csproj"
 COPY . .
 WORKDIR "/src/AspNetCoreApiTemplate"
 RUN dotnet build "AspNetCoreApiTemplate.csproj" -c Release -o /app/build
