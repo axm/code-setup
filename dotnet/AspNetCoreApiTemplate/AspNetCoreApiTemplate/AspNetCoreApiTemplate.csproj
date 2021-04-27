@@ -10,6 +10,9 @@
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <DocumentationFile>C:\Users\Alex\source\repos\environment\dotnet\AspNetCoreApiTemplate\AspNetCoreApiTemplate\AspNetCoreApiTemplate.xml</DocumentationFile>
+    </PropertyGroup>
     <ItemGroup>
         <AdditionalFiles Include="BannedSymbols.txt" />
     </ItemGroup>

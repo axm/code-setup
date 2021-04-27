@@ -71,3 +71,6 @@ indent_size = 4
     # Usage rules support proper usage of .NET.
     dotnet_analyzer_diagnostic.category-Usage.severity = error
 # END USAGE
+
+# CS1591: Missing XML comment for publicly visible type or member
+dotnet_diagnostic.CS1591.severity = silent
