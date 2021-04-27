@@ -43,6 +43,8 @@ indent_size = 4
     # Reliability rules support library and application reliability, such as correct memory and thread usage.
     dotnet_analyzer_diagnostic.category-Reliability.severity = error
     dotnet_code_quality.CA2000.excluded_symbol_names = HttpClient
+    # CA2007: Consider calling ConfigureAwait on the awaited task
+    dotnet_diagnostic.CA2007.severity = silent
 # END RELIABILITY
 
 # BEGIN SECURITY
