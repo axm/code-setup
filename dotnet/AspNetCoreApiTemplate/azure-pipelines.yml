@@ -33,5 +33,5 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Azure ACR'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '$(System.DefaultWorkingDirectory)/dotnet/AspNetCoreApiTemplate/Dockerfile'
